@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 
 export class Message extends Component {
-
     render() {
         return (
-            <div>
-                {this.props.author} says {this.props.text} at {this.props.time}
+            <div style={{ backgroundColor: this.props.author === "bot" ? 'red' : 'green' }}>
+                {this.props.author} says {this.props.text}
             </div>
         )
     }
